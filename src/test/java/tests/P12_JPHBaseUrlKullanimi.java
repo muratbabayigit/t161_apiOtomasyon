@@ -33,7 +33,7 @@ public class P12_JPHBaseUrlKullanimi  extends JPH_BaseUrl {
 
        response.then().assertThat().statusCode(200).body("body",Matchers.hasSize(100));
 
-        System.out.println("All Test PASSED");
+        System.out.println(" Test 01  PASSED ");
 
 
 
@@ -53,8 +53,33 @@ public class P12_JPHBaseUrlKullanimi  extends JPH_BaseUrl {
         Response response=given().spec(specJPH).when().get("/{pp1}/{pp2}");
         response.then().assertThat().statusCode(200).body("title",Matchers.equalTo("optio dolor molestias sit"));
 
-        System.out.println("All Test PASSED");
+        System.out.println(" Test 02  PASSED ");
+
     }
+
+
+
+       /*
+            https://jsonplaceholder.typicode.com/posts/50 endpointine
+            bir DELETE request gonderdigimizde donen response’un
+            status code’unun 200 oldugunu
+            ve response body’sinin null oldugunu test edin
+     */
+
+    @Test
+    public void test03(){
+        specJPH.pathParams("pp1","posts","pp2","50");
+
+        Response response=given().spec(specJPH).when().delete("/{pp1}/{pp2}");
+        response.then().assertThat().statusCode(200).body("title",Matchers.nullValue(),
+                                                      "userId",Matchers.nullValue(),
+                                                                "id",Matchers.nullValue(),
+                                                                "body",Matchers.nullValue());
+
+
+        System.out.println(" Test 03  PASSED ");
+    }
+
 
 
 
