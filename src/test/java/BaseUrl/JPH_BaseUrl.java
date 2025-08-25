@@ -10,5 +10,6 @@ public class JPH_BaseUrl {
     @BeforeTest
     public void setup(){
         specJPH= new RequestSpecBuilder()
-                .setBaseUri("https://restful-booker.herokuapp.com/booking ").build();    }
+                .setBaseUri("https://jsonplaceholder.typicode.com").build();
+    }
 }
