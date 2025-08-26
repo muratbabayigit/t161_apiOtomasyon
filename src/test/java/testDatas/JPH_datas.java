@@ -4,6 +4,8 @@ import org.json.JSONObject;
 
 public class JPH_datas {
         public static int basariliDurumKodu=200;
+        public static String contentType="application/json; charset=utf-8";
+        public static String header="keep-alive";
 
 
 
@@ -26,4 +28,37 @@ public class JPH_datas {
 
             return expData;
         }
+
+
+
+
+
+        public static JSONObject dataCreate(String title,String body, int userId,int id){
+
+            JSONObject data=new JSONObject();
+            data.put("title",title);
+            data.put("body",body);
+            data.put("userId",userId);
+            data.put("id",id);
+
+
+
+            return data;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
