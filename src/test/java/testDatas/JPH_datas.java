@@ -17,8 +17,12 @@ public class JPH_datas {
             return expData;
         }
 
-        public static JSONObject expDataolustur(int id,int userId,String title, String body){
-
+        public static JSONObject expDataolustur2(int id, int userId, String title, String body){
+            JSONObject expData=new JSONObject();
+                expData.put("id",id);
+                expData.put("userId",userId);
+                expData.put("title",title);
+                expData.put("body",body);
 
             return expData;
         }
