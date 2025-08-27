@@ -4,7 +4,7 @@ import BaseUrl.RestFullBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import testDatas.RestFull_datas;
 
 import java.util.HashMap;
@@ -71,6 +71,11 @@ Response Body // expected data
 
        assertEquals(((Map)expMapBody.get("booking")).get("firstname"), ((Map)resMAP.get("booking")).get("firstname"));
        assertEquals(((Map)expMapBody.get("booking")).get("lastname"), ((Map)resMAP.get("booking")).get("lastname"));
+       assertEquals(((Map)expMapBody.get("booking")).get("totalprice"), ((Map)resMAP.get("booking")).get("totalprice"));
+       assertEquals(((Map)expMapBody.get("booking")).get("depositpaid"), ((Map)resMAP.get("booking")).get("depositpaid"));
+       assertEquals(((Map)expMapBody.get("booking")).get("additionalneeds"), ((Map)resMAP.get("booking")).get("additionalneeds"));
+       assertEquals(((Map)((Map)expMapBody.get("booking")).get("bookingdates")).get("checkin"),((Map)((Map)resMAP.get("booking")).get("bookingdates")).get("checkin"));
+       assertEquals(((Map)((Map)expMapBody.get("booking")).get("bookingdates")).get("checkout"),((Map)((Map)resMAP.get("booking")).get("bookingdates")).get("checkout"));
 
 
 

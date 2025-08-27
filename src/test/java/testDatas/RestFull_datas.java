@@ -39,7 +39,7 @@ public class RestFull_datas {
         Map<String,Object> reqMapData=new HashMap<>();
         reqMapData.put("firstname","Sena");
         reqMapData.put("lastname","Yiğit");
-        reqMapData.put("totalprice",1000);
+        reqMapData.put("totalprice",1000.0);
         reqMapData.put("depositpaid",false);
         reqMapData.put("bookingdates",bookingdatesMAP);
         reqMapData.put("additionalneeds","wi-fi");
@@ -50,7 +50,7 @@ public class RestFull_datas {
 
     public static Map<String,Object> expMapDataOlustur(){
         Map<String,Object> expMapData=new HashMap<>();
-        expMapData.put("bookingid",24);
+        expMapData.put("bookingid",24.0);
         expMapData.put("booking",reqMapDataOlustur());
 
 
