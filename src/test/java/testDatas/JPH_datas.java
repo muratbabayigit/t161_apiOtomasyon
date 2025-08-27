@@ -2,6 +2,9 @@ package testDatas;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class JPH_datas {
         public static int basariliDurumKodu=200;
         public static String contentType="application/json; charset=utf-8";
@@ -44,6 +47,16 @@ public class JPH_datas {
 
 
             return data;
+        }
+
+        public static Map<String,Object> MAPdataOlustur(String title, String body, double userId, double id){
+            Map<String,Object> mapData=new HashMap<>();
+            mapData.put("title",title);
+            mapData.put("body",body);
+            mapData.put("userId",userId);
+            mapData.put("id",id);
+
+            return mapData;
         }
 
 
